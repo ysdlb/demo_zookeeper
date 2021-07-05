@@ -12,7 +12,7 @@ import org.I0Itec.zkclient.serialize.BytesPushThroughSerializer;
 public class _9SubscribeDataChanges {
 
 	public static void main(String[] args) throws InterruptedException {
-		ZkClient zc = new ZkClient("192.168.10.5:2181", 10000, 10000, new BytesPushThroughSerializer());
+		ZkClient zc = new ZkClient("[::1]:49164", 10000, 10000, new BytesPushThroughSerializer());
 		System.out.println("conneted ok!");
 		zc.subscribeDataChanges("/node2", new ZkDataListener());
 		Thread.sleep(Integer.MAX_VALUE);

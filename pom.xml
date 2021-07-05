@@ -7,11 +7,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>demo_zookeeper</name>
-	<url>http://maven.apache.org</url>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.15</maven.compiler.source>
+		<maven.compiler.target>1.15</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -19,7 +18,7 @@
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
-			<version>3.4.6</version>
+            <version>3.6.3</version>
 		</dependency>
 
 		<!-- ZkClient -->
@@ -45,14 +44,15 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.6</version>
+			<version>1.2.76</version>
 		</dependency>
 
 		<!-- NIO -->
+		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
-			<version>5.0.0.Alpha2</version>
+			<version>4.1.65.Final</version>
 		</dependency>
 
 	</dependencies>

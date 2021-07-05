@@ -25,13 +25,13 @@ public class ServerHandler extends ChannelHandlerAdapter {
 	}
 
 	@Override
-	public void channelActive(ChannelHandlerContext ctx) throws Exception {
+	public void handlerAdded(ChannelHandlerContext ctx) {
 		System.out.println("one client connect...");
 		balanceUpdater.addBalance(BALANCE_STEP);
 	}
 
 	@Override
-	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+	public void handlerRemoved(ChannelHandlerContext ctx) {
 		System.out.println("one client disconnect...");
 		balanceUpdater.reduceBalance(BALANCE_STEP);
 	}
